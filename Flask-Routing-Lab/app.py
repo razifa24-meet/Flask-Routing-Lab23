@@ -9,10 +9,17 @@ app = Flask(  # Create a flask app
 
 # Your code should be below
 
+@app.route('/')
+def index():
+    return render_template('home.html')
 
-
+@app.route('/rugs')
+def rugs():
+    return render_template('rugs.html')
 
 # Your code should be above
 
 if __name__ == "__main__":  # Makes sure this is the main process
     app.run(debug=True)
+
+
